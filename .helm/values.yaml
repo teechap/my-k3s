@@ -3,7 +3,6 @@ replicaCount: 2
 appName: home
 
 cert-manager:
-    namespace: cert-manager
     crds:
       enabled: true
       keep: true
