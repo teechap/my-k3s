@@ -3,10 +3,8 @@ replicaCount: 2
 appName: home
 
 cert-manager:
+    webbook:
+      hostNetwork: true
     crds:
       enabled: true
       keep: true
-
-global:
-  leaderElection:
-    namespace: my-k3s-prod
