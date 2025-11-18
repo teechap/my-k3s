@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.appName }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.appName }}
+      app.kubernetes.io/name: {{ .Values.appName }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.appName }}
+        app.kubernetes.io/name: {{ .Values.appName }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+      - name: {{ .Values.appName }}
+        image: {{ .Values.werf.image.home }}

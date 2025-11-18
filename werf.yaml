@@ -1,0 +1,6 @@
+configVersion: 1
+project: my-k3s
+---
+image: home
+dockerfile: Dockerfile
+context: ./home

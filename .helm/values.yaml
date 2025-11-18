@@ -1,0 +1,9 @@
+replicaCount: 2
+
+appName: home
+
+cert-manager:
+    namespace: kube-system
+    crds:
+      enabled: true
+      keep: true
