@@ -3,13 +3,13 @@ kind: Ingress
 metadata:
   name: "{{ .Values.appName }}-ingress"
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-staging"
-    kubernetes.io/ingress.class: "traefik"
+    cert-manager.io/cluster-issuer: letsencrypt
+    kubernetes.io/ingress.class: traefik
 spec:
   tls:
   - hosts:
     - exdatic.com
-    secretName: "{{ .Values.appName }}-staging-tls"
+    secretName: letsencrypt
   rules:
   - host: exdatic.com
     http:
