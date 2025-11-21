@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - staging.exdatic.com
+    - exdatic.com
     secretName: "{{ .Values.appName }}-staging-tls"
   rules:
-  - host: staging.exdatic.com
+  - host: exdatic.com
     http:
       paths:
       - path: /
@@ -20,4 +20,4 @@ spec:
           service:
             name: {{ .Values.appName }}
             port:
-              number: 80
+              number: 3000
