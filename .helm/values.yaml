@@ -5,6 +5,7 @@ appName: home
 cert-manager:
     webhook:
       hostNetwork: true
+      securePort: 10260
     crds:
       enabled: true
       keep: true
