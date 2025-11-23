@@ -21,3 +21,4 @@ spec:
             name: {{ .Values.appName }}
             port:
               name: {{ .Values.appName }}
+              number: 3000
