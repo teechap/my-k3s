@@ -19,3 +19,5 @@ spec:
       containers:
       - name: {{ .Values.appName }}
         image: {{ .Values.werf.image.home }}
+        ports:
+        - containerPort: 3000
