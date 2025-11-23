@@ -19,5 +19,3 @@ spec:
         backend:
           service:
             name: {{ .Values.appName }}
-            port:
-              number: 80
