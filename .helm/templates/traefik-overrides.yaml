@@ -10,9 +10,6 @@ spec:
       - "--api.dashboard=false"
       - "--api.insecure=false"
       - "--log.level=DEBUG"
-    ports:
-      traefik:
-        expose: true
     providers:
       kubernetesCRD:
         allowCrossNamespace: true
