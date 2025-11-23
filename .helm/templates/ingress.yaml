@@ -19,3 +19,5 @@ spec:
         backend:
           service:
             name: {{ .Values.appName }}
+            port:
+              name: {{ .Values.appName }}
