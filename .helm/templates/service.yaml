@@ -13,3 +13,5 @@ spec:
     app.kubernetes.io/instance: {{ .Release.Name }}
   ports:
   - name: {{ .Values.appName }}
+    port: 3000
+    targetPort: 3000
